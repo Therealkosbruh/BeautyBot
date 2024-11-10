@@ -30,6 +30,7 @@ class ProductsController extends Controller
         $product = Products::find()
             ->where(['Product_ID' => $id])
             ->with('productImages')
+            ->with('productExtra')
             ->one();
 
         if ($product === null) {

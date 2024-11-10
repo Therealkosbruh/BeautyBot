@@ -18,7 +18,14 @@ $this->title = $product->Product_Name;
         <a class="videoButton" href="#video"><img src="/web/img/icons/interface/videoIcon.svg" alt="video" /></a>
     </section>
     <section class="productInfo">
-        <div class="price"><?= $product->Price ?> ₽</div>
+        <?php if($product->Discount) { ?>
+            <div>
+                <span class="price" style="margin-right: 20px"><?= number_format($product->Price - ($product->Price * ($product->Discount / 100)), 0, ',', ' ') ?> ₽</span>
+                <del class="productPriceDiscount"><?= number_format($product->Price, 0, ',', ' ') ?> ₽</del>
+            </div>
+        <?php } else { ?>
+            <div class="price"><?= number_format($product->Price, 0, ',', ' ') ?> ₽</div>
+        <?php } ?>
         <hr />
         <div class="colors">
             <span class="colorsText">Цвет</span>
@@ -36,11 +43,11 @@ $this->title = $product->Product_Name;
             <div class="flexRow splitInfo">
                 <div class="flexColumn">
                     <span class="splitSpan"> Сейчас </span>
-                    <span class="splitPrice"> <?= ($product->Price / 2) ?> ₽ </span>
+                    <span class="splitPrice"> <?= number_format($product->Price / 2, 0, ',', ' ') ?> ₽ </span>
                 </div>
                 <div class="flexColumn">
                     <span class="splitSpan"> Через 3 недели </span>
-                    <span class="splitPrice"> <?= ($product->Price / 2) ?> ₽ </span>
+                    <span class="splitPrice"> <?= number_format($product->Price / 2, 0, ',', ' ') ?> ₽ </span>
                 </div>
             </div>
         </section>
@@ -57,63 +64,54 @@ $this->title = $product->Product_Name;
         </section>
     </section>
     <section class="productTextInfo">
+        <?php if(!empty($product->productExtra->Characteristics)){ ?>
         <section class="accordion">
             <div class="accordionHeader">
                 <span>Характеристики</span>
             </div>
             <div class="accordionContent">
                 <p>
-                    - Алюминиевый корпус <br>
-                    - Активное шумоподавление/режим прозрачности <br>
-                    - Амбушюры с магнитным креплением <br>
-                    - Высокое качество звука и исполнения- Оригинальная анимация и настройки <br><br>
-
-                    Активное шумоподавление убирает внешний шум, обнаруживая внешние звуки микрофоном и подавляя их.
-                    Это приводит к отключению внешних звуков, так что вы их не слышите или слышите очень приглушено  <br><br>
-
-                    Режим прозрачности — это противоположность активного шумоподавления. Вы можете включить режим,
-                    если хотите поговорить с кем-нибудь вживую, не вынимая наушники из ушей или включить режим
-                    прозрачности, когда находитесь в таких местах, как аэропорт, где Вы не хотите пропустить важные
-                    объявления  <br>
-
-                    Оригинальный серийный номер пробивается на официальном сайте  <br>
+                    <?= $product->productExtra->Characteristics ?>
                 </p>
             </div>
         </section>
+        <?php } ?>
+        <?php if(!empty($product->productExtra->Kit)){ ?>
         <section class="accordion">
             <div class="accordionHeader">
                 <span>Комплект</span>
             </div>
             <div class="accordionContent">
                 <p>
-                    1. USB-кабель <br>
-                    2. Инструкция <br>
-                    3. чехол Smart Case <br>
+                    <?= $product->productExtra->Kit ?>
                 </p>
             </div>
         </section>
+        <?php } ?>
+        <?php if(!empty($product->productExtra->Offer)){ ?>
         <section class="accordion">
             <div class="accordionHeader">
                 <span>Выгодное предложение</span>
             </div>
             <div class="accordionContent">
                 <p>
-                    НАБОРОМ ОТ 9340₽ (при заказе от 3-х товаров)
+                    <?= $product->productExtra->Offer ?>
                 </p>
             </div>
         </section>
+        <?php } ?>
+        <?php if(!empty($product->productExtra->Delivery)){ ?>
         <section class="accordion">
             <div class="accordionHeader">
                 <span>Доставка</span>
             </div>
             <div class="accordionContent">
                 <p>
-                    Доставка производится по всей РФ и миру преимущественно СДЭКом, но так же отправляем и Почтой. <br>
-                    Для заказов по РФ и Казахстана Вы можете оформить заказ, как с оплатой при получении, так и по полной предоплате. <br>
-                    Точные сроки доставки до Вашего города можно уточнить у менеджера.
+                    <?= $product->productExtra->Delivery ?>
                 </p>
             </div>
         </section>
+        <?php } ?>
     </section>
     <section class="reviewBlock">
         <h3>Отзывы</h3>

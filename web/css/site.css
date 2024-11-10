@@ -128,6 +128,12 @@ header {
   display: flex;
   overflow: auto;
   gap: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.mainSliderWithSystem a{
+  scroll-snap-align: center;
 }
 
 .mainSliderWithSystem img {
@@ -186,6 +192,12 @@ header {
   display: flex;
   overflow: auto;
   gap: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.productSlider a{
+  scroll-snap-align: center;
 }
 
 /* Товары на главной */
@@ -199,7 +211,7 @@ header {
 }
 
 .card {
-  background-color: var(--block-background);
+  border: none;
   padding: 15px;
   width: 100%;
   border-radius: var(--border-radius);
@@ -370,6 +382,19 @@ header {
   line-height: 43.93px;
 }
 
+.productPrice{
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27.61px;
+}
+
+.productPriceDiscount {
+  font-size: 30px;
+  font-weight:700;
+  opacity: .3;
+}
+
+
 .priceDiscount{
   opacity: .3;
   font-size: 16px;
@@ -499,7 +524,13 @@ hr {
   display: flex;
   flex-direction: row;
   overflow: auto;
-  gap: 20px
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.sliderWithReview a{
+  scroll-snap-align: center;
 }
 
 .sliderWithReview div {

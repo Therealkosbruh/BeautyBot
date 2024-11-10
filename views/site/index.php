@@ -1,7 +1,8 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var $products array */
+/** @var $products */
+/** @var $categories */
 
 use yii\helpers\Html;
 
@@ -61,12 +62,11 @@ $this->title = 'Luxpods';
     </div>
     <a class="saleBlock" style="background-image: url('//web/img/banner/saleBanner.svg')" href="#"></a>
     <section class="productSlider">
-      <img src="/web/img/silder/sliderWithProduct/naushniki.svg" alt="" />
-      <img src="/web/img/silder/sliderWithProduct/gadget.svg" alt="" />
-      <img src="/web/img/silder/sliderWithProduct/kolonki.svg" alt="" />
-      <img src="/web/img/silder/sliderWithProduct/technikaDyson.svg" alt="" />
-      <img src="/web/img/silder/sliderWithProduct/zaryadki.svg" alt="" />
-      <img src="/web/img/silder/sliderWithProduct/odechda.svg" alt="" />
+        <?php
+        foreach ($categories as $category) {
+            echo Html::a(Html::img($category->Category_Image, ['alt' => $category->Category_Name]), ['products/index', 'category' => $category->Category_ID]);
+        }
+        ?>
     </section>
     <h2>Наши товары</h2>
       <section class="productCards">
@@ -84,11 +84,11 @@ $this->title = 'Luxpods';
                   <img src="<?= $product->mainImage->Image_URL ?>" alt="<?= $product->Product_Name ?>" />
                   <?php if($product->Discount) { ?>
                       <div style="margin-left: 0">
-                          <span class="productPrice"><?= $product->Price - ($product->Price * ($product->Discount / 100))?> ₽</span>
-                          <del class="productPrice priceDiscount"><?= $product->Price?> ₽</del>
+                          <span class="productPrice" style="margin-right: 5px"><?= number_format($product->Price - ($product->Price * ($product->Discount / 100)), 0, ',', ' ') ?> ₽</span>
+                          <del class="productPrice priceDiscount"><?= number_format($product->Price, 0, ',', ' ') ?> ₽</del>
                       </div>
                   <?php }else{ ?>
-                      <span class="productPrice"><?= $product->Price ?> ₽</span>
+                      <span class="productPrice" ><?= number_format($product->Price, 0, ',', ' ') ?> ₽</span>
                   <?php } ?>
                   <span class="productName"><?= $product->Product_Name ?></span>
                   <?= Html::a('Купить', ['products/product', 'id' => $product->Product_ID], ['class' => "productBuyButton"]);?>

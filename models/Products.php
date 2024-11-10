@@ -154,4 +154,10 @@ class Products extends \yii\db\ActiveRecord
     {
         return $this->hasMany(VideoReviews::class, ['Product_ID' => 'Product_ID']);
     }
+
+
+    public function getProductExtra()
+    {
+        return $this->hasOne(ProductExtra::class, ['Product_ID' => 'Product_ID']);
+    }
 }

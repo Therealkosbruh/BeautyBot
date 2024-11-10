@@ -41,11 +41,11 @@ $this->title = 'Luxpods';
                 <img src="<?= $product->mainImage->Image_URL?>" alt="<?= $product->Product_Name?>" />
                 <?php if($product->Discount) {?>
                     <div style="margin-left: 0">
-                        <span class="productPrice"><?= $product->Price - ($product->Price * ($product->Discount / 100))?> ₽</span>
-                        <del class="productPrice priceDiscount"><?= $product->Price?> ₽</del>
+                        <span class="productPrice" style="margin-right: 5px"><?= number_format($product->Price - ($product->Price * ($product->Discount / 100)), 0, ',', ' ') ?> ₽</span>
+                        <del class="productPrice priceDiscount"><?= number_format($product->Price, 0, ',', ' ') ?> ₽</del>
                     </div>
                 <?php }else{?>
-                    <span class="productPrice"><?= $product->Price?> ₽</span>
+                    <span class="productPrice"><?= number_format($product->Price, 0, ',', ' ') ?> ₽</span>
                 <?php }?>
                 <span class="productName"><?= $product->Product_Name?></span>
                 <?= Html::a('Купить', ['products/product', 'id' => $product->Product_ID], ['class' => "productBuyButton"]);?>

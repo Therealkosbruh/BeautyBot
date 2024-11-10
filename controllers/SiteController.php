@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Categories;
 use app\models\ProductImages;
 use app\models\Products;
 use Yii;
@@ -68,8 +69,11 @@ class SiteController extends Controller
             ->with('productMarkAssignments')
             ->all();
 
+        $categories = Categories::find()->all();
+
         return $this->render('index', [
             'products' => $products,
+            'categories' => $categories
         ]);
     }
 
