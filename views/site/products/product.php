@@ -9,7 +9,7 @@ use yii\helpers\Html;
 $this->title = $product->Product_Name;
 ?>
 
-<div class="container">
+<div class="container" style="padding-bottom: 20px;">
     <section class="productImage">
         <?= Html::img($product->mainImage->Image_URL, ['alt' => 'product']) ?>
     </section>

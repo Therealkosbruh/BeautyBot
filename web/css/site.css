@@ -55,6 +55,7 @@ li {
   --color-primary: #333;
   --color-secondary: #fff;
   --color-tertiary: #f2f2f2;
+  --color-payment-gray: #939393;
   --color-font-main: #292928;
   --rang-background: #587ebd;
   --main-background: #f1f1f1;
@@ -156,11 +157,45 @@ header {
   grid-template-rows: 1fr 1fr;
 }
 
-.payInfoBlock a:last-child,
 .payInfoBlock div:first-child a {
   background-color: var(--block-background);
   width: 100%;
   border-radius: var(--border-radius);
+  padding: 15px 20px;
+}
+
+.rassrochkaBlock span:first-child, .payBlock span:first-child{
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 23.17px;
+  color: var(--color-font-main);
+}
+
+.rassrochkaBlock span:last-child{
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 46.33px;
+  color: var(--more-link-color);
+}
+
+.payBlock span:last-child{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.13px;
+  color: var(--color-payment-gray);
+}
+
+.actionsBlock span{
+  color: var(--color-secondary);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 23.17px;
+}
+
+.actionsBlock{
+  background-color: var(--more-link-color);
+  border-radius: var(--border-radius);
+  width: 100%;
   padding: 15px 20px;
 }
 

@@ -9,7 +9,7 @@ use yii\helpers\Html;
 $this->title = 'Luxpods';
 ?>
 
-  <div class="container">
+  <div class="container" style="padding-bottom: 20px;">
     <header class="flexRow">
       <a class="userInfo flexRow" href="#">
       <img src="/web/img/user/avatar/avatar.png" alt="Аватар">
@@ -44,11 +44,11 @@ $this->title = 'Luxpods';
     <section class="payInfoBlock">
       <div>
         <a class="rassrochkaBlock" href="#">
-          <span>Рассрочка</span>
+          <span>Рассрочка</span> <br>
           <span>0%</span>
         </a>
         <a class="payBlock" href="#">
-          <span>Оплата при получении</span>
+          <span>Оплата при получении</span> <br>
           <span>Как это работает?</span>
         </a>
       </div>
