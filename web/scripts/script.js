@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Выбор цвета
     const colorsButtons = document.querySelectorAll('[data-color]');
+    const productImage = document.getElementById('productImageMain');
     const colorName = document.querySelector('.colorName');
     colorsButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             e.target.classList.add('active');
             colorName.textContent = e.target.dataset.color;
+            productImage.src = e.target.dataset.image;
         })
     });
 

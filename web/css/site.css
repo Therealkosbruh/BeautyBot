@@ -365,11 +365,16 @@ header {
 .productImage img {
   width: 100%;
   border-radius: var(--border-radius);
+  scroll-snap-align: center;
 }
 
 .productImage {
   margin-bottom: 30px;
   margin-top: 20px;
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
 }
 
 /* Цвета товаров */

@@ -31,6 +31,7 @@ class ProductsController extends Controller
             ->where(['Product_ID' => $id])
             ->with('productImages')
             ->with('productExtra')
+            ->with('colors')
             ->one();
 
         if ($product === null) {

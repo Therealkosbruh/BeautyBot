@@ -11,7 +11,12 @@ $this->title = $product->Product_Name;
 
 <div class="container" style="padding-bottom: 20px;">
     <section class="productImage">
-        <?= Html::img($product->mainImage->Image_URL, ['alt' => 'product']) ?>
+        <?= Html::img($product->mainImage->Image_URL, ['alt' => 'product', 'id' => 'productImageMain']) ?>
+        <?php foreach ($product->productImages as $key => $productImage): ?>
+            <?php if ($key != 0): ?>
+                <?= Html::img($productImage->Image_URL, ['alt' => 'product']) ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </section>
     <section class="productHeading flexRow">
         <h2 id="productName"><?= $product->Product_Name ?></h2>
@@ -26,17 +31,18 @@ $this->title = $product->Product_Name;
         <?php } else { ?>
             <div class="price"><?= number_format($product->Price, 0, ',', ' ') ?> ₽</div>
         <?php } ?>
-        <hr />
+
+        <?php if(!empty($product->colors)){ ?>
         <div class="colors">
             <span class="colorsText">Цвет</span>
             <div class="chooseColor flexRow">
-                <div class="colorCircle active" data-color="Черный" style="background-color: black"></div>
-                <div class="colorCircle" data-color="Белый" style="background-color: rgb(255, 255, 255)"></div>
-                <div class="colorCircle" data-color="Оливковый" style="background-color: rgb(154, 184, 150)"></div>
-                <div class="colorCircle" data-color="Серый" style="background-color: rgb(151, 151, 151)"></div>
+                <?php foreach ($product->colors as $key => $color){ ?>
+                <div class="colorCircle <?= $key == 1 ?: "active" ?>" data-color="<?= $color->Color_Name ?>" data-image="<?= $color->Color_image ?>" style="background-color: <?= $color->Color_Code ?>"></div>
+                <?php } ?>
             </div>
-            <span class="colorName">Черный</span>
+            <span class="colorName"><?= $product->colors[0]->Color_Name ?></span>
         </div>
+        <?php } ?>
         <hr />
         <section class="split flexColumn">
             <h3>Можно оплатить в сплит</h3>
