@@ -2,9 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\ProductImages;
+use app\models\Products;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
@@ -55,13 +58,19 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
-     *
-     * @return string
+     * @throws NotFoundHttpException
      */
-    public function actionIndex()
+    public function actionIndex(): string
     {
-        return $this->render('index');
+        $products = Products::find()
+            ->andWhere(['OnMain' => true])
+            ->with('mainImage')
+            ->with('productMarkAssignments')
+            ->all();
+
+        return $this->render('index', [
+            'products' => $products,
+        ]);
     }
 
     /**

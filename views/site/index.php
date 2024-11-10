@@ -1,9 +1,13 @@
 <?php
 
 /** @var yii\web\View $this */
+/** @var $products array */
+
+use yii\helpers\Html;
 
 $this->title = 'Luxpods';
 ?>
+
   <div class="container">
     <header class="flexRow">
       <a class="userInfo flexRow" href="#">
@@ -65,70 +69,31 @@ $this->title = 'Luxpods';
       <img src="/web/img/silder/sliderWithProduct/odechda.svg" alt="" />
     </section>
     <h2>Наши товары</h2>
-    <section class="productCards">
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-
-      <div class="card flexColumn">
-        <div class="productMarks"></div>
-        <img src="/web/img/product/productStock.png" alt="" />
-        <span class="productPrice">10 990 ₽</span>
-        <span class="productName">Наушники Air Max</span>
-        <a href="/product.html" class="productBuyButton">Купить</a>
-      </div>
-    </section>
-    <a href="/products.html" class="showMoreButton">Показать все товары</a>
+      <section class="productCards">
+          <?php
+          foreach ($products as $num => $product) {
+              ?>
+              <div class="card flexColumn">
+                  <div class="productMarks">
+                      <?php if($product->productMarkAssignments){?>
+                          <?php foreach ($product->marks as $mark){?>
+                              <?= Html::a($mark->Mark_Name, ['products/index', 'mark' => $mark->Mark_Name], ['class' => $mark->Mark_Name.'Mark', 'style' => 'text-transform: uppercase;'])?>
+                          <?php }?>
+                      <?php }?>
+                  </div>
+                  <img src="<?= $product->mainImage->Image_URL ?>" alt="<?= $product->Product_Name ?>" />
+                  <?php if($product->Discount) { ?>
+                      <div style="margin-left: 0">
+                          <span class="productPrice"><?= $product->Price - ($product->Price * ($product->Discount / 100))?> ₽</span>
+                          <del class="productPrice priceDiscount"><?= $product->Price?> ₽</del>
+                      </div>
+                  <?php }else{ ?>
+                      <span class="productPrice"><?= $product->Price ?> ₽</span>
+                  <?php } ?>
+                  <span class="productName"><?= $product->Product_Name ?></span>
+                  <?= Html::a('Купить', ['products/product', 'id' => $product->Product_ID], ['class' => "productBuyButton"]);?>
+              </div>
+          <?php } ?>
+      </section>
+    <?= Html::a('Посмотреть все товары', ['products/index'], ['class' => "showMoreButton"]);?>
   </div>

@@ -199,7 +199,6 @@ header {
 }
 
 .card {
-  height: 325px;
   background-color: var(--block-background);
   padding: 15px;
   width: 100%;
@@ -214,6 +213,10 @@ header {
 .productPrice,
 .productName {
   margin: 0;
+}
+
+.productName {
+  margin-bottom: 10px;
 }
 
 .productBuyButton {
@@ -269,7 +272,8 @@ header {
 
 .newMark,
 .hitMark,
-.saleMark {
+.saleMark,
+.hotMark{
   padding: 4px 7px;
   border-radius: var(--border-radius-mark);
   color: var(--color-secondary);
@@ -283,7 +287,7 @@ header {
   background-color: var(--mark-new-bgcolor);
 }
 
-.hitMark {
+.hitMark, .hotMark {
   background-color: var(--mark-hit-bgcolor);
 }
 
@@ -366,6 +370,13 @@ header {
   line-height: 43.93px;
 }
 
+.priceDiscount{
+  opacity: .3;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.08px;
+}
+
 .productInfo {
   border-radius: var(--border-radius);
   padding: 20px;
@@ -375,7 +386,7 @@ header {
 /* Разделитель */
 
 hr {
-  margin: 20px 0px 15px 0px;
+  margin: 20px 0 15px 0;
   color: #f1f1f1;
   border: 1px solid;
 }
