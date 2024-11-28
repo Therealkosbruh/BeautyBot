@@ -5,8 +5,18 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Products;
+use Yii;
 class ProductSearch extends Model
 {
+
+    public $search;
+
+    public function attributeLabels()
+    {
+        return [
+            'search' => Yii::t('app', 'Поиск'),
+        ];
+    }
 
     public function rules()
     {
@@ -26,6 +36,7 @@ class ProductSearch extends Model
         $search = $params['search'] ?? null;
         $mark = $params['mark'] ?? null;
         $category = $params['category'] ?? null;
+        $chip = $params['chip'] ?? null;
 
         $query = Products::find()
             ->with('mainImage')
@@ -49,7 +60,9 @@ class ProductSearch extends Model
                 ->andWhere(['cat.Category_ID' => $category]);
         }
 
-
+        if($chip){
+            $query->orderBy(['price' => SORT_ASC]);
+        }
 
         return $dataProvider;
     }

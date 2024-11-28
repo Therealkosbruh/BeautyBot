@@ -13,6 +13,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Stock;
 
 class SiteController extends Controller
 {
@@ -74,6 +75,17 @@ class SiteController extends Controller
         return $this->render('index', [
             'products' => $products,
             'categories' => $categories
+        ]);
+    }
+
+    public function actionStock(): string
+    {
+        $stocks = Stock::find()
+            ->orderBy(['Stock_ID' => 'ASC'])
+            ->all();
+
+        return $this->render('stock', [
+            'stocks' => $stocks,
         ]);
     }
 

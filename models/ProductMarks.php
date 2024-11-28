@@ -15,6 +15,10 @@ use Yii;
  */
 class ProductMarks extends \yii\db\ActiveRecord
 {
+    const MARK_NEW = 'new';
+    const MARK_SALE = 'sale';
+    const MARK_HOT = 'hot';
+    const MARK_HIT = 'hit';
     /**
      * {@inheritdoc}
      */

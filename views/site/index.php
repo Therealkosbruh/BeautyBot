@@ -3,8 +3,10 @@
 /** @var yii\web\View $this */
 /** @var $products */
 /** @var $categories */
+/** @var $afterBuy boolean */
 
 use yii\helpers\Html;
+use yii\web\View;
 
 $this->title = 'Luxpods';
 ?>
@@ -52,8 +54,7 @@ $this->title = 'Luxpods';
           <span>Как это работает?</span>
         </a>
       </div>
-      <a class="actionsBlock" href="#">
-        <span>Наши акции</span>
+      <?= Html::a('<span>Наши акции</span>', ['/site/stock'], ['class' => 'actionsBlock']) ?>
       </a>
     </section>
     <div class="feedbackBlock" href="#">

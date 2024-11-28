@@ -37,7 +37,7 @@ $this->title = $product->Product_Name;
             <span class="colorsText">Цвет</span>
             <div class="chooseColor flexRow">
                 <?php foreach ($product->colors as $key => $color){ ?>
-                <div class="colorCircle <?= $key == 1 ?: "active" ?>" data-color="<?= $color->Color_Name ?>" data-image="<?= $color->Color_image ?>" style="background-color: <?= $color->Color_Code ?>"></div>
+                <div class="colorCircle <?= $key != 0 ?: "active" ?>" data-color="<?= $color->Color_Name ?>" data-image="<?= $color->Color_image ?>" style="background-color: <?= $color->Color_Code ?>"></div>
                 <?php } ?>
             </div>
             <span class="colorName"><?= $product->colors[0]->Color_Name ?></span>
@@ -143,4 +143,8 @@ $this->title = $product->Product_Name;
         <h3>Видеообзор</h3>
         <video src="/web/video/naushniki/video.mp4" subtitles="/web/video/naushniki/subtitles.vtt" description="/web/video/naushniki/description.txt" poster="/web/img/video/poster/poster.png" class="videoOfProduct" id="video">У вас не поддерживается это видео</video>
     </section>
+    <?= Html::button('Добавить в корзину', [
+        'data-productid' => $product->Product_ID,
+        'class' => 'showMoreButton addToCartButton'
+    ]) ?>
 </div>

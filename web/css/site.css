@@ -11,283 +11,283 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @font-face {
-  font-family: "Mulish";
-  src: url("/assets/fonts/Mulish-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Mulish";
+    src: url("/assets/fonts/Mulish-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
 
 * {
-  margin: 0 auto;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-  border: none;
-  font-family: "Mulish", sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Mulish", sans-serif;
 }
 
 body {
-  margin: 0 auto;
-  max-width: 600px;
-  background-color: var(--main-background);
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: var(--main-background);
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .flexRow {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .flexColumn {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 :root {
-  /* Colors */
-  --color-primary: #333;
-  --color-secondary: #fff;
-  --color-tertiary: #f2f2f2;
-  --color-payment-gray: #939393;
-  --color-font-main: #292928;
-  --rang-background: #587ebd;
-  --main-background: #f1f1f1;
-  --block-background: #ffffff;
-  --block-buttons-color: #f1f1f1;
-  --more-link-color: #7561e8;
-  --mark-new-bgcolor: #45b649;
-  --mark-hit-bgcolor: #fe646f;
-  --mark-sale-bgcolor: #ffca28;
+    /* Colors */
+    --color-primary: #333;
+    --color-secondary: #fff;
+    --color-tertiary: #f2f2f2;
+    --color-payment-gray: #939393;
+    --color-font-main: #292928;
+    --rang-background: #587ebd;
+    --main-background: #f1f1f1;
+    --block-background: #ffffff;
+    --block-buttons-color: #f1f1f1;
+    --more-link-color: #7561e8;
+    --mark-new-bgcolor: #45b649;
+    --mark-hit-bgcolor: #fe646f;
+    --mark-sale-bgcolor: #ffca28;
 
-  /* border */
-  --border-radius: 20px;
-  --border-radius-mark: 7px;
-  --border-radius-buttons: 20px;
+    /* border */
+    --border-radius: 20px;
+    --border-radius-mark: 7px;
+    --border-radius-buttons: 20px;
 }
 
 .container {
-  margin-top: 20px;
-  max-width: 500px;
+    margin-top: 20px;
+    max-width: 500px;
 }
 
 /* header */
 
 header {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .userInfo img {
-  max-width: 80px;
-  border-radius: 50%;
+    max-width: 80px;
+    border-radius: 50%;
 }
 
 .nameBlock {
-  justify-content: center;
+    justify-content: center;
 }
 
 .username a {
-  font-size: 24px;
-  font-weight: 900;
-  color: var(--color-font-main);
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--color-font-main);
 }
 
 .rang {
-  padding: 3px 14px;
-  background-color: var(--rang-background);
-  color: var(--color-secondary);
-  border-radius: var(--border-radius);
-  font-size: 16px;
+    padding: 3px 14px;
+    background-color: var(--rang-background);
+    color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    font-size: 16px;
 }
 
 .userInfo {
-  gap: 15px;
+    gap: 15px;
 }
 
 .tgLinking {
-  align-self: center;
-  border-radius: 400px;
-  background-color: var(--block-background);
-  padding: 8px 12px;
+    align-self: center;
+    border-radius: 400px;
+    background-color: var(--block-background);
+    padding: 8px 12px;
 }
 
 .tgLogo {
-  justify-content: center;
+    justify-content: center;
 }
 
 /* Первый слайдер на главной */
 
 .mainSliderWithSystem {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  display: flex;
-  overflow: auto;
-  gap: 10px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
-.mainSliderWithSystem a{
-  scroll-snap-align: center;
+.mainSliderWithSystem a {
+    scroll-snap-align: center;
 }
 
 .mainSliderWithSystem img {
-  margin: 0;
+    margin: 0;
 }
 
 /* Секция с рассрочкой, оплатой и тд */
 
 .payInfoBlock {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  height: 220px;
-  margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 220px;
+    margin-bottom: 20px;
 }
 
 .payInfoBlock div:first-child {
-  display: grid;
-  gap: 10px;
-  grid-template-rows: 1fr 1fr;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr 1fr;
 }
 
 .payInfoBlock div:first-child a {
-  background-color: var(--block-background);
-  width: 100%;
-  border-radius: var(--border-radius);
-  padding: 15px 20px;
+    background-color: var(--block-background);
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
 }
 
-.rassrochkaBlock span:first-child, .payBlock span:first-child{
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 23.17px;
-  color: var(--color-font-main);
+.rassrochkaBlock span:first-child, .payBlock span:first-child {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 23.17px;
+    color: var(--color-font-main);
 }
 
-.rassrochkaBlock span:last-child{
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 46.33px;
-  color: var(--more-link-color);
+.rassrochkaBlock span:last-child {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 46.33px;
+    color: var(--more-link-color);
 }
 
-.payBlock span:last-child{
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.13px;
-  color: var(--color-payment-gray);
+.payBlock span:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.13px;
+    color: var(--color-payment-gray);
 }
 
-.actionsBlock span{
-  color: var(--color-secondary);
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 23.17px;
+.actionsBlock span {
+    color: var(--color-secondary);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 23.17px;
 }
 
-.actionsBlock{
-  background-color: var(--more-link-color);
-  border-radius: var(--border-radius);
-  width: 100%;
-  padding: 15px 20px;
+.actionsBlock {
+    background-color: var(--more-link-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    padding: 15px 20px;
 }
 
 /* Блок отзывов */
 
 .feedbackBlock {
-  width: 100%;
-  padding: 15px 20px;
-  background-color: var(--block-background);
-  border-radius: var(--border-radius);
-  margin-bottom: 25px;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--block-background);
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
 }
 
 /* Блок распродажи */
 
 .saleBlock {
-  height: 140px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--border-radius);
+    height: 140px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
 }
 
 /* Слайдер с товарами */
 
 .productSlider {
-  margin-top: 25px;
-  margin-bottom: 40px;
-  display: flex;
-  overflow: auto;
-  gap: 10px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
-.productSlider a{
-  scroll-snap-align: center;
+.productSlider a {
+    scroll-snap-align: center;
 }
 
 /* Товары на главной */
 
 /* Карточки */
 .productCards {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 .card {
-  border: none;
-  padding: 15px;
-  width: 100%;
-  border-radius: var(--border-radius);
-  position: relative;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    position: relative;
 }
 
 .card img {
-  width: 184px;
+    width: 184px;
 }
 
 .productPrice,
 .productName {
-  margin: 0;
+    margin: 0;
 }
 
 .productName {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .productBuyButton {
-  background-color: var(--block-buttons-color);
-  color: var(--color-font-main);
-  border-radius: var(--border-radius-buttons);
-  padding: 13px;
-  width: 100%;
-  text-align: center;
-  margin-top: auto;
+    background-color: var(--block-buttons-color);
+    color: var(--color-font-main);
+    border-radius: var(--border-radius-buttons);
+    padding: 13px;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
 }
 
 /* Кнопка для показа всех товаров */
 
 .showMoreButton {
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  text-align: center;
-  width: 100%;
-  color: var(--color-secondary);
-  background-color: var(--more-link-color);
-  padding: 20px;
-  border-radius: var(--border-radius);
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    color: var(--color-secondary);
+    background-color: var(--more-link-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
 }
 
 /* Страницы товаров */
@@ -295,195 +295,270 @@ header {
 /* Фильтр и заголовок */
 .productFilterHeading h2,
 .productFilter {
-  margin: 0;
+    margin: 0;
 }
 
 .productFilterHeading {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .productFilter button {
-  border: none;
+    border: none;
+}
+
+.filterButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.productFilterHeading .search, .productFilterHeading .filterButtons, .productFilterHeading div:first-child {
+    width: 100%;
+}
+
+.productFilterHeading div:first-child {
+    justify-content: space-between;
+}
+
+#productsearch-search {
+    padding: 15px 20px;
+    padding-left: 60px;
+    border: none;
+}
+
+#productsearch-search::placeholder {
+    color: var(--color-payment-gray);
+}
+
+.search {
+    position: relative;
+}
+
+.hidden {
+    height: 0px;
+    overflow: hidden;
+}
+
+.search, .filterButtons {
+    transition: all .5s ease-in-out;
+}
+
+.filters {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.search figure img {
+    opacity: .4;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 20px;
+}
+
+#showSearchButton img, #showFilterButton img {
+    transition: all .3s ease-in-out;
+}
+
+#showSearchButton img.active, #showFilterButton img.active {
+    filter: invert(46%) sepia(39%) saturate(6739%) hue-rotate(231deg) brightness(96%) contrast(89%);
+}
+
+.filterButtons a {
+    width: 100%;
+    border: 1px solid transparent;
+    color: var(--color-font-main);
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 500;
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.filterButtons a.active {
+    border: 1px solid var(--more-link-color);
 }
 
 /* Метки товаров */
 
 .productMarks {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  gap: 2px;
-  display: flex;
-  flex-direction: column;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
 }
 
 .newMark,
 .hitMark,
 .saleMark,
-.hotMark{
-  padding: 4px 7px;
-  border-radius: var(--border-radius-mark);
-  color: var(--color-secondary);
-  text-align: center;
-  font-size: 11.43px;
-  font-weight: 800;
-  line-height: 14.34px;
+.hotMark {
+    padding: 4px 7px;
+    border-radius: var(--border-radius-mark);
+    color: var(--color-secondary);
+    text-align: center;
+    font-size: 11.43px;
+    font-weight: 800;
+    line-height: 14.34px;
 }
 
 .newMark {
-  background-color: var(--mark-new-bgcolor);
+    background-color: var(--mark-new-bgcolor);
 }
 
 .hitMark, .hotMark {
-  background-color: var(--mark-hit-bgcolor);
+    background-color: var(--mark-hit-bgcolor);
 }
 
 .saleMark {
-  background-color: var(--mark-sale-bgcolor);
+    background-color: var(--mark-sale-bgcolor);
 }
 
 /* Страница товара */
 
 #productName {
-  font-size: 35px;
-  font-weight: 900;
-  line-height: 43.93px;
-  text-align: left;
-  margin-left: 0;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 43.93px;
+    text-align: left;
+    margin-left: 0;
 }
 
 .productHeading {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .videoButton {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 /* Изображение товара */
 
 .productImage img {
-  width: 100%;
-  border-radius: var(--border-radius);
-  scroll-snap-align: center;
+    max-height: 400px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    scroll-snap-align: center;
 }
 
 .productImage {
-  margin-bottom: 30px;
-  margin-top: 20px;
-  display: flex;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
 /* Цвета товаров */
 
 .colorCircle {
-  border-radius: 50%;
-  opacity: 0.5;
-  width: 39px;
-  height: 39px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 0;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
+    border-radius: 50%;
+    opacity: 0.5;
+    width: 39px;
+    height: 39px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 .colorCircle.active {
-  opacity: 1;
-  border: 3px solid var(--more-link-color);
+    opacity: 1;
+    border: 3px solid var(--more-link-color);
 }
 
 .chooseColor {
-  gap: 10px;
-  margin: 15px 0 15px 0;
+    gap: 10px;
+    margin: 15px 0 15px 0;
 }
 
 .colorsText {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 27.61px;
-  color: var(--color-font-main);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27.61px;
+    color: var(--color-font-main);
 }
 
 .colorName {
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 21.34px;
-  color: var(--color-font-main);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21.34px;
+    color: var(--color-font-main);
 }
 
 /* Информация о цене товара */
 
 .price {
-  font-size: 35px;
-  font-weight: 900;
-  line-height: 43.93px;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 43.93px;
 }
 
-.productPrice{
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 27.61px;
+.productPrice {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.61px;
 }
 
 .productPriceDiscount {
-  font-size: 30px;
-  font-weight:700;
-  opacity: .3;
+    font-size: 30px;
+    font-weight: 700;
+    opacity: .3;
 }
 
 
-.priceDiscount{
-  opacity: .3;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20.08px;
+.priceDiscount {
+    opacity: .3;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
 }
 
 .productInfo {
-  border-radius: var(--border-radius);
-  padding: 20px;
-  background-color: var(--block-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    background-color: var(--block-background);
 }
 
 /* Разделитель */
 
 hr {
-  margin: 20px 0 15px 0;
-  color: #f1f1f1;
-  border: 1px solid;
+    margin: 20px 0 15px 0;
+    color: #f1f1f1;
+    border: 1px solid;
 }
 
 /* Сплит */
 
 .split h3 {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 27.61px;
-  margin-left: 0;
-  color: var(--color-font-main);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27.61px;
+    margin-left: 0;
+    color: var(--color-font-main);
 }
 
 .splitSpan {
-  color: var(--color-font-main);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16.85px;
+    color: var(--color-font-main);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.85px;
 }
 
 .splitPrice {
-  color: var(--color-font-main);
-  font-size: 35px;
-  font-weight: 900;
-  line-height: 43.93px;
+    color: var(--color-font-main);
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 43.93px;
 }
 
 .splitInfo {
-  margin-left: 0;
-  margin-top: 15px;
-  gap: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    gap: 40px;
 }
 
 /* Товар - слайдер */
@@ -492,410 +567,427 @@ hr {
 .productSliderWithSystem,
 .reviewBlock,
 .productVideo {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: var(--color-secondary);
-  border-radius: var(--border-radius);
-  padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    padding: 20px;
 }
 
 .productSliderWithSystem h3,
 .reviewBlock h3,
 .productVideo h3 {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 23.17px;
-  margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 23.17px;
+    margin-bottom: 15px;
 }
 
 /* Товар аккардеон */
 
 .accordionContent {
-  height: 0;
-  overflow: hidden;
-  transition: height 1s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
 }
 
 .accordionContent.show {
-  transition: height 1s ease-in-out;
+    transition: height 1s ease-in-out;
 }
 
 .accordionHeader {
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 23.17px;
-  transition: all 1s ease-in-out;
-  display: flex;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 23.17px;
+    transition: all 1s ease-in-out;
+    display: flex;
 }
 
 .accordionHeader span {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .accordion {
-  padding: 20px;
-  border-radius: var(--border-radius);
-  background-color: var(--color-secondary);
-  margin-bottom: 10px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary);
+    margin-bottom: 10px;
 }
 
 .accordionHeader::after {
-  transition: all 1s ease-in-out;
-  content: "";
-  width: 20px;
-  height: 9px;
-  float: right;
-  display: flex;
-  align-self: center;
-  transform: rotate(-180deg);
-  background-image: url(../img/icons/interface/arrowForAccordion.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+    transition: all 1s ease-in-out;
+    content: "";
+    width: 20px;
+    height: 9px;
+    float: right;
+    display: flex;
+    align-self: center;
+    transform: rotate(-180deg);
+    background-image: url(../img/icons/interface/arrowForAccordion.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .accordionHeader.rotate::after {
-  transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
 /* Слайдер с отзывами */
 
 .sliderWithReview {
-  display: flex;
-  flex-direction: row;
-  overflow: auto;
-  gap: 20px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
-.sliderWithReview a{
-  scroll-snap-align: center;
+.sliderWithReview a {
+    scroll-snap-align: center;
 }
 
 .sliderWithReview div {
-  width: 269px;
+    width: 269px;
 }
 
 .showAllReviewButton {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 23.04px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.04px;
 }
 
 /* Видеообзор */
 
-.videoOfProduct{
-  width: 295px;
-  height: 526px;
-  display: flex;
+.videoOfProduct {
+    width: 295px;
+    height: 526px;
+    display: flex;
 }
 
 /* Корзина */
 
-.cartHeader h3{
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 37.65px;
-  color: var(--color-font-main);
-  margin-left: 0;
-  margin-bottom: 24px;
+.cartHeader h3 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 37.65px;
+    color: var(--color-font-main);
+    margin-left: 0;
+    margin-bottom: 24px;
 }
 
-.cartHeader button{
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17.57px;
-  color: var(--color-font-main);
-  opacity: .3;
-  margin-right: 0;
+.cartHeader button {
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.57px;
+    color: var(--color-font-main);
+    opacity: .3;
+    margin-right: 0;
 }
 
 
-.productCart{
-  padding: 20px 15px;
-  border-radius: var(--border-radius);
-  background-color: var(--block-background);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-bottom: 10px;
+.productCart {
+    position: relative;
+    padding: 20px 15px;
+    border-radius: var(--border-radius);
+    background-color: var(--block-background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
 }
 
-.leftSide img{
-  height: 130px;
+.removeItem {
+    background: none;
+    position: absolute;
+    right: 15px;
+    opacity: .5;
+    color: red;
+    top: 5px;
+    font-size: 0.9rem;
 }
 
-.productCartName{
-  margin-left: 0;
-font-size: 22px;
-font-weight: 700;
-line-height: 27.61px;
-color: var(--color-font-main);
-margin-bottom: 10px;
-width: 50%;
+.leftSide img {
+    height: 130px;
 }
 
-.productCartColorBlock span{
-font-size: 16px;
-font-weight: 400;
-line-height: 16.85px;
-color: var(--color-font-main);
-margin-bottom: 15px;
+.productCartName {
+    margin-left: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.61px;
+    color: var(--color-font-main);
+    margin-bottom: 10px;
+    width: 50%;
 }
 
-.productCartColorBlock{
-  gap: 5px;
+.productCartColorBlock span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.85px;
+    color: var(--color-font-main);
+    margin-bottom: 15px;
 }
 
-.productCartPrice{
-font-size: 22px;
-font-weight: 700;
-line-height: 27.61px;
-color: var(--color-font-main);
-margin-bottom: 20px;
+.productCartColorBlock {
+    gap: 5px;
 }
 
-.productCartCount{
-  background-color: var(--main-background);
-  padding: 9px 12px;
-  gap: 10px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16.85px;
-  color: var(--color-font-main);
-  border-radius: 10px;
+.productCartPrice {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.61px;
+    color: var(--color-font-main);
+    margin-bottom: 20px;
+}
+
+.productCartCount {
+    background-color: var(--main-background);
+    padding: 9px 12px;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16.85px;
+    color: var(--color-font-main);
+    border-radius: 10px;
 }
 
 .productCartCount button {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16.85px;
-  color: var(--color-font-main);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16.85px;
+    color: var(--color-font-main);
 }
 
-.rightSide div{
-  margin-left: 0;
+.rightSide div {
+    margin-left: 0;
 }
 
-.productsAtCart{
-  margin-bottom: 20px;
+.productsAtCart {
+    margin-bottom: 20px;
 }
 
 /* Контактная информация */
 
-.contactInfoBlock h3{
-  margin-left: 0;
-  font-size: 25px;
-  font-weight: 800;
-  line-height: 31.38px;
-  margin-bottom: 15px;
+.contactInfoBlock h3 {
+    margin-left: 0;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 31.38px;
+    margin-bottom: 15px;
 }
 
-.contactForm{
-  padding: 20px;
-  border-radius: var(--border-radius);
-  background-color: var(--block-background);
+.contactForm {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--block-background);
 }
 
-input[type="text"], #comment, input[type="email"], input[type="tel"]{
-  padding: 10px 7px;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  color: var(--color-font-main);
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 21.34px;
-  border-radius: 10px;
-  margin-bottom: 5px;
+input[type="text"], #comment, input[type="email"], input[type="tel"], .field-cartform-comment {
+    padding: 10px 7px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: var(--color-font-main);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21.34px;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 
-input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder{
-  color: var(--color-font-main);
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 21.34px;
+input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder {
+    color: var(--color-font-main);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21.34px;
 }
 
-.contactForm span{
-  margin-bottom: 10px;
-  margin-top: 20px;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 21.34px;
-  margin-left: 0;
-  color: var(--color-font-main);
+.contactForm span {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21.34px;
+    margin-left: 0;
+    color: var(--color-font-main);
 }
 
-#comment{
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 100px;
-  max-height: 100px;
+#comment {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 100px;
 }
 
 /* Способы оплаты */
 
-.contactInfoBlock{
-  margin-bottom: 30px;
+.contactInfoBlock {
+    margin-bottom: 30px;
 }
 
-.cartPayment h3{
-  font-size: 25px;
-  font-weight: 800;
-  line-height: 31.38px;
-  margin-bottom: 15px;
-  color: var(--color-font-main);
+.cartPayment h3 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 31.38px;
+    margin-bottom: 15px;
+    color: var(--color-font-main);
 }
 
-.cartPaymentBlocks div span, .leftSideSplit span{
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 25.1px;
-  color: var(--color-font-main);
+.cartPaymentBlocks div span, .leftSideSplit span, .cartPaymentBlocksType div span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.1px;
+    color: var(--color-font-main);
 }
 
-.cartPaymentBlocks div img{
-  width: 30px;
+.cartPaymentBlocks div img {
+    width: 30px;
 }
 
-.cards, .sbp{
-  padding: 10px 20px;
+.cards, .sbp {
+    padding: 10px 20px;
 }
 
-.splitPayment{
-  padding: 15px 26px;
-  margin-top: 10px;
-  width: 100%;
+.splitPayment {
+    padding: 15px 26px;
+    margin-top: 10px;
+    width: 100%;
 }
 
-.cards, .sbp, .splitPayment{
-  border-radius: var(--border-radius);
-  background-color: var(--block-background);
-  width: 100%;
+.cards, .sbp, .splitPayment {
+    border-radius: var(--border-radius);
+    background-color: var(--block-background);
+    width: 100%;
 }
 
-.methodWithoutSplit{
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.methodWithoutSplit {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
-.cards img, .cards span, .sbp img, .sbp span{
-margin: 0;
+.cards img, .cards span, .sbp img, .sbp span {
+    margin: 0;
 }
 
-.leftSideSplit img, .leftSideSplit span, .leftSideSplit{
-  margin-left: 0;
+.leftSideSplit img, .leftSideSplit span, .leftSideSplit {
+    margin-left: 0;
 }
 
-.rightSideSplit span, .rightSideSplit{
-  margin-right: 0;
+.rightSideSplit span, .rightSideSplit {
+    margin-right: 0;
 }
 
-.rightSideSplit, .leftSideSplit{
-  justify-content: space-between;
-  gap: 6px;
+.rightSideSplit, .leftSideSplit {
+    justify-content: space-between;
+    gap: 6px;
 }
 
-.rightSideSplit span:last-child{
-  padding: 10px 11px;
-  background-color: var(--block-buttons-color);
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 13.69px;
-  color: var(--color-font-main);
+.rightSideSplit span:last-child {
+    padding: 10px 11px;
+    background-color: var(--block-buttons-color);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13.69px;
+    color: var(--color-font-main);
 }
 
-.rightSideSplit span:first-child{
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 21.06px;
-  color: var(--color-font-main);
+.rightSideSplit span:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 21.06px;
+    color: var(--color-font-main);
 }
 
-.cartPayment{
-  margin-bottom: 30px;
+.cartPayment {
+    margin-bottom: 30px;
 }
 
 /* Промокод */
 
-.promo{
-  background-color: var(--block-background);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.promo {
+    background-color: var(--block-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
-.promo span{
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 27.61px;
-  color: var(--color-font-main);
-  align-content: center;
+.promo span {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.61px;
+    color: var(--color-font-main);
+    align-content: center;
 }
 
-.promo input{
-  margin: auto;
+.promo input {
+    margin: auto;
 }
 
-.summaryInfo span{
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 31.38px;
-color: var(--color-font-main);
+.summaryInfo span {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 31.38px;
+    color: var(--color-font-main);
 }
 
-.summaryInfo{
-  margin: 0;
+.summaryInfo {
+    margin: 0;
 }
 
-.summaryInfo span:nth-child(odd){
-  font-size: 20px;
-  margin-left: 0;
+.summaryInfo span:nth-child(odd) {
+    font-size: 20px;
+    margin-left: 0;
 }
 
-.summaryInfo span:nth-child(even){
-  margin-right: 0;
+.summaryInfo span:nth-child(even) {
+    margin-right: 0;
 }
 
-.summary{
-  padding: 20px;
-  border-radius: var(--border-radius);
-  background-color: var(--block-background);
+.summary {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--block-background);
 }
 
-.summaryCount{
-  color: var(--color-font-main);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17.57px;
-  opacity: 0.3;
-  margin: 0;
+.summaryCount {
+    color: var(--color-font-main);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.57px;
+    opacity: 0.3;
+    margin: 0;
 }
 
-.flexRow.summaryInfo{
-  justify-content: space-between;
+.flexRow.summaryInfo {
+    justify-content: space-between;
 }
 
-.payMethod{
-  opacity: .5;
-  border: 2px solid transparent;
-  transition: all .4s ease-in-out;
-  cursor: pointer;
+.payMethod {
+    opacity: .5;
+    border: 2px solid transparent;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
 }
 
-.payMethod:hover{
-  opacity: .6;
-  border: 2px solid var(--more-link-color);
+.payMethod:hover {
+    opacity: .6;
+    border: 2px solid var(--more-link-color);
 }
 
-.payMethod.active{
-  opacity: 1;
-  border: 2px solid var(--more-link-color);
+.payMethod.active {
+    opacity: 1;
+    border: 2px solid var(--more-link-color);
+}
+
+/*  YII техничка */
+
+#search-form label {
+    display: none;
 }
