@@ -118,7 +118,7 @@ if (isset($afterBuy)){
         </section>
         <section class="cartPayment">
             <h3>Тип оплаты</h3>
-            <div class="cartPaymentBlocksType flexColumn">
+            <div class="cartPaymentBlocksType cartPaymentBlocks flexRow methodWithoutSplit">
                     <div class="flexColumn cards payType active" style="gap: 6px;">
                         <span>
                         Оплата при получении

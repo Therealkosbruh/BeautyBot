@@ -89,6 +89,11 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionActions(){
+        return $this->render('signup');        
+    }
+
+
     /**
      * Login action.
      *
@@ -149,5 +154,9 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionInvite(){
+        return $this->render('@app/views/friendinvite');
     }
 }

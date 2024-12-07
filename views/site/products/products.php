@@ -14,42 +14,32 @@ $this->title = 'Luxpods';
 ?>
 
 <div class="container">
-    <section class="productSlider">
-        <?php
-        foreach ($categories as $category) {
-            echo Html::a(Html::img($category->Category_Image, ['alt' => $category->Category_Name]), ['products/index', 'category' => $category->Category_ID]);
-        }
-        ?>
-    </section>
+
     <div class="productFilterHeading flexColumn">
         <div class="flexRow">
-            <h2>Наши товары</h2>
-            <div class="productFilter">
-                <button id="showSearchButton"><img src="/web/img/icons/interface/searchNormal.svg" alt="search"></button>
-                <button id="showFilterButton"><img src="/web/img/icons/interface/filter.svg" alt="filter"></button>
-            </div>
+            <h2>Наши услуги</h2>
         </div>
 
         <div class="filters">
-            <div class="search hidden">
+            <div class="search ">
                 <?php $form = ActiveForm::begin([
                     'method' => 'get',
                     'action' => ['products/index'],
                     'id' => 'search-form',
                 ]); ?>
                 <figure>
-                    <img src="/web/img/icons/interface/searchNormal.svg" alt="search">
+                    <img src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/photo_2024-12-05_15-14-34.jpg" alt="search">
                 </figure>
                 <?= $form->field($searchModel, 'search')->textInput(['name' => 'search', 'onblur' => 'document.getElementById("search-form").submit();', 'placeholder' => 'Поиск']) ?>
                 <button type="submit" style="position:absolute;left:-9999px;width:0;height:0;">Поиск</button>
                 <?php ActiveForm::end(); ?>
             </div>
-            <div class="filterButtons hidden">
-                <?= Html::a("Популярные", ['products/index', 'mark' => ProductMarks::MARK_HOT], ["id" => "hotLink"]) ?>
-                <?= Html::a("Сначала дешевые", ['products/index', 'chip' => true], ["id" => "chipLink"]) ?>
-                <?= Html::a("Новинки", ['products/index', 'mark' => ProductMarks::MARK_NEW], ["id" => "newLink"]) ?>
-                <?= Html::a("Акции", ['products/index', 'mark' => ProductMarks::MARK_SALE], ["id" => "saleLink"]) ?>
-            </div>
+            <section class="mainSliderWithSystem">
+                <?= Html::a("Массаж", ['products/index', 'mark' => ProductMarks::MARK_HOT], ["id" => "hotLink"]) ?>
+                <?= Html::a("Лазерная эпиляция", ['products/index', 'chip' => true], ["id" => "chipLink"]) ?>
+                <?= Html::a("Абонименты на массаж", ['products/index', 'mark' => ProductMarks::MARK_NEW], ["id" => "newLink"]) ?>
+                <?= Html::a("Абонименты на лазер", ['products/index', 'mark' => ProductMarks::MARK_SALE], ["id" => "saleLink"]) ?>
+            </section>
         </div>
 
 
