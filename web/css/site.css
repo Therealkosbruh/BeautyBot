@@ -124,6 +124,7 @@ header {
 .custom-link {
     text-decoration: none; 
     color: inherit; 
+    width: 270px;
 }
 
 /* ���֬�Ӭ��� ��ݬѬ۬լ֬� �߬� �ԬݬѬӬ߬�� */
@@ -145,6 +146,18 @@ header {
 .mainSliderWithSystem img {
     margin: 0;
     border-radius: 25px;
+}
+.mainSliderWithSystem button{
+  scroll-snap-align: center; 
+  flex-shrink: 0; 
+  width: 54px; 
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgba(206, 176, 255, 1);
 }
 
 /* ���֬ܬ�ڬ� �� ��Ѭ�����ܬ��, ���ݬѬ��� �� ��� */
@@ -1230,6 +1243,10 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
         background: #00919E;
     }
 
+    #sign-up-banner{
+      margin-top: 300px;
+      max-width: 550px;
+    }
 
 
 @media (max-width: 768px) {
@@ -1371,7 +1388,7 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     background-color: rgba(255, 255, 255, 1);
     width: 100%;
     padding: 15px;
-    height: 125px;
+    height: 115px;
   }
   
   .service-content {
@@ -1400,6 +1417,8 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     height: 95px;
     object-fit: cover;
     border-radius: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
   }
   
   .details-wrapper {
@@ -1454,7 +1473,7 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     white-space: nowrap;
     text-align: right;
     line-height: 1;
-    margin-left: 250px;
+    margin-left: 290px;
     position: relative; 
     top: -75px; 
   }
@@ -1492,12 +1511,116 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     .service-title, .service-duration, .service-pricee {
       font-size: 14px;
     }
+    .service-card {
+      padding: 10px; 
+      height: 90px;
+      width: 370px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-right: 80px;
+  }
+
+  .service-content {
+      display: flex;
+      flex-direction: row; 
+      gap: 5px; 
+      width: 100%;
+      align-items: flex-start;
+  }
+
+  .image-wrapper {
+      width: 60px; 
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .service-image {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 15px;
+  }
+
+  .details-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5px;
+      text-align: left;
+      flex-grow: 1;
+      margin-right: 1px; 
+  }
+
+  .service-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+  }
+
+  .service-title,
+  .service-duration,
+  .service-pricee {
+      color: rgba(41, 41, 40, 1);
+      font-size: 11px;
+      text-align: left;
+      line-height: 1.2;
+  }
+
+  .service-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+  }
+
+  .service-duration {
+      color: rgba(181, 181, 181, 1);
+  }
+
+  .service-pricee {
+      font-weight: 700;
+      color: rgba(41, 41, 40, 1);
+  }
+
+  .action-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 30px; 
+      margin-left: 220px;
+  }
+
+  .select-button {
+      
+      font-size: 9px;
+      border-radius: 17px;
+      background-color: rgb(241, 241, 241);
+      color: rgb(41, 41, 40);
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s ease;
+      margin-top: 5px;
+      width: 65px; 
+      max-width: 100%; 
+  }
+
+  .select-button:hover {
+      background-color: rgba(231, 231, 231, 1);
+  }
+
+  .select-button:focus {
+      outline: 2px solid rgba(41, 41, 40, 0.5);
+      outline-offset: 2px;
+  }
   }
     @media (max-width: 768px) {
                 .service-card {
                     padding: 10px; 
-                    height: 
-                    110px;
+                    height: 90px;
                     width: 370px;
                     box-sizing: border-box;
                     display: flex;
@@ -2141,6 +2264,10 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     padding: 30px 20px;
     margin-top: 30px;
   }
+
+  #schedule{
+    margin-top: -25px;
+  }
   
   .history-title {
     color: rgba(41, 41, 40, 1);
@@ -2215,8 +2342,13 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
 }
 
 .points-spent,
-.points-earned{
+.points-earned
+{
     margin-right: 25px;
+}
+
+.service-app-time{
+    margin-right: -15px;
 }
 
 .points-earned,
@@ -2235,3 +2367,1136 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
 .points-spent {
     color: rgba(254, 100, 111, 1);
 }
+
+/* user profile */
+.appointment-card {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    max-width: 437px;
+    padding: 15px;
+    margin-top: 15px;
+  }
+  .appointment-content {
+    gap: 1px;
+    display: flex;
+  }
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: -15px;
+  }
+  .service-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 70px;
+    border-radius: 20px;
+  }
+  .appointment-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 75%;
+    margin-right: -30px;
+  }
+  .appointment-details {
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    flex-direction: column;
+    font-family: Mulish, sans-serif;
+    margin-left: -50px;
+  }
+  .appointment-service-info {
+    display: flex;
+  }
+  .appointment-service-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-right: 100px;
+  }
+  .appointment-service-name {
+    color: rgba(41, 41, 40, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .appointment-service-price {
+    color: rgba(181, 181, 181, 1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: 75%;
+  }
+  .time-details {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 15px;
+    color: rgba(41, 41, 40, 1);
+    white-space: nowrap;
+    text-align: right;
+    justify-content: start;
+  }
+  .appointment-date {
+    font-weight: 700;
+  }
+  .appointment-time {
+    font-weight: 400;
+    margin-left: 50%;
+  }
+  .appointment-action-buttons {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(41, 41, 40, 1);
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: right;
+    line-height: 1;
+    justify-content: start;
+    margin-top: 6px;
+    margin-left: 125px;
+  }
+  .cancel-btn,
+  .reschedule-btn {
+    align-self: stretch;
+    border-radius: 20px;
+    background-color: rgba(241, 241, 241, 1);
+    gap: 10px;
+    margin: auto 0;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+ 
+  @media (max-width: 768px) {
+    .appointment-card {
+        padding: 10px; 
+        height: 
+        110px;
+        width: 370px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 20px;
+    }
+    .action-buttons{
+      margin-right: 50px;
+    }
+   .cancel-btn,
+   .reschedule-btn{
+    font-size: 10px;
+    border-radius: 17px;
+    background-color: rgb(241, 241, 241);
+    color: rgb(41, 41, 40);
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+    margin-top: -10px;
+    width: 75px; 
+    max-width: 100%;   
+   }
+}
+
+/* employee profile */
+.profile-specialist-card {
+    background-color: rgba(241, 241, 241, 1);
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    padding: 50px 0 0;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+    
+  .main-content {
+    display: flex;
+    margin-bottom: 3rem;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .profile-specialist-info {
+    display: flex;
+    gap: 20px;
+    font-family: Mulish, sans-serif;
+    color: rgba(41, 41, 40, 1);
+    margin-right: 200px;
+  }
+  
+  .specialist-photo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 140px;
+    border-radius: 100%;
+  }
+  
+  .profile-specialist-details {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+  
+  .name-title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .profile-specialist-name {
+    font: 800 25px Mulish, sans-serif;
+    margin-left: -1px;
+  }
+  
+  .specialist-position-title {
+    font: 400 15px/1 Mulish, sans-serif;
+    margin: 5px 0 0;
+    width: 150px;
+  }
+  
+  .experience {
+    font: 400 15px/1 Mulish, sans-serif;
+    margin: 20px 0 0;
+  }
+  
+  .description {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 30px 0 0;
+    padding: 30px 20px;
+    font: 400 16px/19px Mulish, sans-serif;
+    color: rgba(41, 41, 40, 1);
+    max-width: 397px;
+    text-align: justify;
+    hyphens: auto; 
+    word-break: break-word; 
+    overflow-wrap: break-word; 
+  }
+  
+  .specialization {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 20px 0 0;
+    padding: 30px 20px;
+    color: rgba(41, 41, 40, 1);
+    max-width: 397px;
+  }
+  
+  .specialization-title {
+    font: 800 25px Mulish, sans-serif;
+  }
+  
+
+   .specialization-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 15px 0 0;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    text-align: left; 
+    }
+
+    .tag {
+    border-radius: 30px;
+    background-color: rgba(206, 176, 255, 0.2);
+    padding: 10px 15px;
+    font: 400 13px/1 Mulish, sans-serif;
+    text-align: left; 
+    margin: 0; 
+    }
+
+  .reviews-section {
+    margin: 40px 0 0;
+  }
+  
+  .reviews-title {
+    font: 800 30px Mulish, sans-serif;
+    color: rgba(41, 41, 40, 1);
+  }
+  
+  .review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 0;
+  }
+  
+  .review-card {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 397px;
+    margin-right: 40px;
+  }
+
+  @media (max-width: 768px){
+    .review-card{
+        max-width: 360px;
+    }
+  }
+  
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 180px;
+  }
+  
+  .reviewer-name {
+    font: 600 17px/1.2 Mulish, sans-serif;
+    color: rgba(41, 41, 40, 1);
+  }
+
+  .star-rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+   .star {
+    position: relative;
+    width: 13px;
+    height: 13px;
+  }
+  
+  .star::before {
+    content: '★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #7561E84D; 
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1;
+    z-index: 1;
+  }
+  
+  .star::after {
+    content: '★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #7561E8; 
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1;
+    z-index: 2;
+    overflow: hidden;
+    display: block;
+    width: var(--fill-percentage, 0%);
+    white-space: nowrap;
+  }
+  
+
+  .review-text {
+    margin: 10px 0 0;
+    font: 400 14px/17px Mulish, sans-serif;
+    color: rgba(41, 41, 40, 1);
+  }
+  
+  .cta-button {
+    border-radius: 17px;
+    background-color: rgba(117, 97, 232, 1);
+    margin: 40px 0 0;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font: 700 20px/1 Mulish, sans-serif;
+    cursor: pointer;
+    max-width: 397px;
+  }
+
+  /* appointment-page */
+  .icon-button {
+    display: flex;
+    width: 54px;
+    height: 54px; 
+    flex-direction: column; /* Сохраняем вертикальную направленность */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; 
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .appointment-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgba(206, 176, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* width: 54px;  */
+    width: 100%;
+    height: 54px; 
+    aspect-ratio: 1; /* Это поможет сохранить пропорции блока */
+    overflow: hidden;
+  }
+  
+  .appointment-icon {
+    aspect-ratio: 1;
+    width: 100%; 
+    height: 25px; 
+    width: 25px;
+    object-fit: contain;
+  }
+
+
+  .date-strong{
+    font-weight: bold; 
+    color: #000; 
+    font-size: 14px; 
+    line-height: 1.2; 
+    text-align: center;
+    margin: 0; 
+  }
+
+  .appointment-icon-wrapper span:not(.date-strong) {
+    font-size: 16px; 
+    color: #000;
+    margin: 0;
+    text-align: center;
+}
+  
+  
+  .app-specialist-card {
+    display: flex;
+    max-width: 437px;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 100px;
+  }
+  
+  .card-container {
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 15px;
+  }
+  
+  .app-profile-header {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+  }
+  
+  .app-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: start;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  
+  .app-profile-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 95px;
+    border-radius: 50%;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .app-specialist-info {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 212px;
+    margin: auto 0;
+  }
+  
+  .app-name-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font: 400 18px/1 Mulish, sans-serif;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    text-align: left; 
+  }
+  
+  .app-specialist-name {
+    color: #29292840;
+    font-size: 18px;
+    text-align: left; 
+    margin-right: 150px;
+  }
+  
+  .app-specialist-title {
+    color: #b5b5b5;
+    font-size: 15px;
+    margin-right: 30px;
+    /* margin-right: 130px; */
+  }
+  
+  .rating-container {
+    align-self: start;
+    display: flex;
+    margin-top: 9px;
+    align-items: center;
+    gap: 10px;
+    margin-right: 60px;
+  }
+  
+  .stars-container {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: auto 0;
+  }
+  
+  .star-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 13px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .review-count {
+    color: #b5b5b5;
+    align-self: stretch;
+    margin: auto 0;
+    font: 400 12px/1 Mulish, sans-serif;
+  }
+  
+  .settings-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    align-self: start;
+    margin-top: 20px;
+  }
+  
+  .time-section-title {
+    color: #000;
+    margin: 15px 0 0 10px;
+    font: 400 15px/1 Mulish, sans-serif;
+  }
+  
+  .time-slots-container {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    color: #292928;
+    white-space: nowrap;
+    justify-content: start;
+    font: 500 13px/1 Mulish, sans-serif;
+  }
+
+  @media (max-width: 400px){
+    .time-slots-container{
+      font: 500 9px/1 Mulish, sans-serif;
+    }
+
+    .appointment-icon {
+      width: 25px !important;
+      height: 25px !important;  
+  }
+  }
+  @media (max-width: 600px){
+    .time-slots-container{
+      font: 500 9px/1 Mulish, sans-serif;
+    }
+
+    .appointment-icon {
+      width: 25px !important;
+      height: 25px !important;  
+  }
+  }
+  
+  .time-slots-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 6px;
+    justify-content: start;
+  }
+  
+  .time-slot {
+    align-self: stretch;
+    border-radius: 20px;
+    background-color: rgba(206, 176, 255, 0.2);
+    padding: 10px 13px;
+    margin: 5px 0;
+  }
+  
+  .app-book-button {
+    align-self: end;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    margin-top: 10px;
+    color: #292928;
+    white-space: nowrap;
+    padding: 10px 15px;
+    font: 400 14px/1 Mulish, sans-serif;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  #app-button{
+    margin-left: 65px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 437px;
+    border-radius: 17px;
+    background-color: rgba(117, 97, 232, 1);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font: 700 20px/1 Mulish, sans-serif;
+    cursor: pointer;
+  }
+
+  .calendar-container {
+    display: flex;
+    max-width: 437px;
+    flex-direction: column;
+    font-family: Mulish, sans-serif;
+    margin-right: 100px;
+  }
+  
+  .calendar-wrapper {
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 31px 35px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .month-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 26px;
+  }
+  
+  .current-month {
+    font-size: 20px;
+    color: #292928;
+    font-weight: 700;
+  }
+  
+  .month-nav-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .month-nav {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .calendar-grid {
+    width: 100%;
+  }
+  
+  .weekdays-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .weekdays-header span {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+  }
+  
+  .dates-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .date-cell {
+    font-size: 15px;
+    font-weight: 600;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .date-cell-inactive {
+    color: #b5b5b5;
+    cursor: default;
+  }
+  
+  .date-cell-selected {
+    background-color: #7561e8;
+    color: #fff;
+  }
+  
+  .date-cell:not(.date-cell-inactive):hover {
+    background-color: rgba(117, 97, 232, 0.1);
+  }
+  
+  .date-cell:focus {
+    outline: 2px solid #7561e8;
+    outline-offset: 2px;
+  }
+  
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+
+  @media (max-width: 768px){
+    .calendar-container{
+      margin-right: 0;
+    }
+
+    .app-specialist-card{
+      margin-right: 0px;
+    }
+
+    .time-slots-row {
+      gap: 2px;
+      margin-right: 3px;
+    }
+
+    .settings-icon{
+      margin-left: -50px;
+    }
+
+    #app-button{
+      margin-left: 15px;
+      width: 370px;
+    }
+  }
+
+  /* subscription profile page */
+  .subscription-page {
+    background-color: #f1f1f1;
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    flex-direction: column;
+    font-family: Mulish, sans-serif;
+    margin: 0 auto;
+  }
+
+  .subscr-banner{
+    margin-left: -10px;
+  }
+  
+  .subscription-container {
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 40px 30px;
+    margin-top: 20px;
+  }
+  
+  .subscription-title {
+    color: black;
+    z-index: 99999;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-top: 30px;
+  }
+  
+  .payment-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-self: start;
+    aspect-ratio: 6.13;
+    margin-top: 19px;
+    font-size: 14px;
+    color: #292928;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 19px 16px;
+  }
+  
+  .payment-image {
+    position: absolute;
+    inset: 0;
+    height: 125px;
+    width: 330px;
+    margin-top: -30px;
+    margin-right: -100px;
+    /* margin-right: -60px; */
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .highlight-text {
+    text-decoration: underline;
+    color: #7561e8;
+  }
+  
+  .service-description {
+    color: #292928;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 56px;
+  }
+  
+  .equipment-highlight {
+    font-weight: 700;
+    color: #7561e8;
+  }
+  
+  .aftercare-info {
+    color: #292928;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 25px;
+  }
+  
+  .benefits-container {
+    border-radius: 10px;
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 21px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefits-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: start;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+  
+  .benefit-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 34px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .benefit-content {
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    justify-content: start;
+    margin: auto 0;
+  }
+  
+  .benefit-title {
+    color: #1d1d1f;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .benefit-description {
+    color: rgba(29, 29, 31, 0.7);
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+
+  .pricing-content {
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    justify-content: start;
+    margin-top: -10px;
+  }
+  
+  .pricing-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sessions-text {
+    align-self: stretch;
+    min-width: 240px;
+    gap: 18px;
+    width: 275px;
+    margin: auto 0;
+    font: 16px/1.2 Mulish, sans-serif;
+  }
+  
+  .price-text {
+    align-self: stretch;
+    gap: 18px;
+    text-align: right;
+    width: 122px;
+    margin: auto 0;
+    font: 17px Montserrat, sans-serif;
+  }
+  
+  .price-old {
+    font-family: Mulish, sans-serif;
+    font-weight: 500;
+    text-decoration: line-through;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .price-new {
+    font-family: Mulish, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .divider-line {
+    min-height: 0;
+    margin-top: 10px;
+    max-width: 100%;
+    width: 397px;
+    border: 1px solid rgba(217, 217, 217, 1);
+  }
+
+  .zero-percent {
+    color: #fff;
+    text-transform: uppercase;
+    font: 900 105px/1.2 Mulish, sans-serif;
+    margin-right: 250px;
+    margin-top: -20px;
+    margin-left: -20px;
+    z-index: 5555;
+  }
+  .payment-container {
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #212121;
+    max-width: 435px;
+    /* width: 437px; */
+    max-height: 130px;
+    overflow: hidden;
+    padding: 30px;
+  }
+  .payment-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+  .banner-payment-info {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 61%;
+  }
+  .payment-details {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: -10px;
+    font: 400 14px/1.2 Mulish, sans-serif;
+  }
+  .payment-logo {
+    aspect-ratio: 7.19;
+    object-fit: contain;
+    object-position: center;
+    width: 209px;
+  }
+  .payment-duration {
+    align-self: start;
+    margin-top: 7px;
+  }
+  .percentage-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 39%;
+    margin-left: 20px;
+  }
+  
+  .percent-span{
+    font-size: 25.5px;
+    font-weight: 900;
+    z-index: 90000;
+    color: #7561E8;
+    margin-top: -100px;
+    margin-left:25px;
+  }
+  
+  .banner-image{
+    z-index: 0;
+    margin-left: -70px;
+    margin-top: -90px;
+    max-height: 150px;
+  }
+
+  .banner-image-hands{
+    z-index: 0;
+    max-height: 130px;
+    margin-top: -155px;
+    margin-left: 200px;
+  }
+
+  .banner-title{
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 39px;
+  }
+
+  @media (max-width:600px){
+    .banner-image-hands{
+      max-height: 95px;
+      margin-top: -125px;
+      margin-left: 220px;
+    }
+    #sign-up-banner{
+      margin-top: -10px;
+    }
+  }
+
+  @media (max-width: 400px){
+    .banner-image-hands{
+      max-height: 85px;
+      margin-top: -115px;
+      margin-left: 200px;
+    }
+
+    .banner-title{
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .button-right-bottom {
+      margin-left: 80px; 
+   }
+  }
+
+  @media (max-width: 370px){
+    .banner-image-hands{
+      max-height: 80px;
+      margin-top: -110px;
+      margin-left: 170px;
+    }
+
+    .banner-title{
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+   .payment-duration {
+      align-self: start;
+      margin-top: 5px;
+      font-size: 11px;
+    }
+    .zero-percent {
+      font: 900 70px/1.2 Mulish, sans-serif;
+      margin-right: 250px;
+      margin-top: -5px;
+      margin-left: -10px;
+    }
+    .percent-span{
+      font-size: 20.5px;
+      color: #7561E8;
+      margin-top: -75px;
+      margin-left:20px;
+    }
+    .button-right-bottom {
+     margin-left: 80px; 
+  }
+}
+
+  #subscription-app-button{
+    margin-left: 65px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 475px;
+  border-radius: 17px;
+  background-color: rgba(117, 97, 232, 1);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font: 700 20px/1 Mulish, sans-serif;
+  cursor: pointer;
+  }
+
+  #subsc-price-list{
+    max-width: 480px;
+  }
+
+  #s-banner{
+    max-width: 480px;
+  }
+
+  @media (max-width: 768px){
+    .payment-image{
+      margin-right: -60px;
+    }
+    #subscription-app-button{
+      margin-left: 65px;
+    }
+  }
+
+  @media (max-width:450px){
+    #subscription-app-button{
+      width: 390px;
+      margin-left: 15px;
+    }
+  }
+
+  @media (max-width:390px) {
+    #subscription-app-button{
+      width: 350px;
+      margin-left: 15px;
+    }
+  }

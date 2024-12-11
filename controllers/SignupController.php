@@ -18,4 +18,8 @@ class SignupController extends \yii\web\Controller
         return $this->render("@app/views/site/serviceinfo");
     }
 
+    public function actionSignup(){
+        return $this->render("@app/views/site/appointment");
+    }
+
 }

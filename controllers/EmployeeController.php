@@ -9,4 +9,9 @@ class EmployeeController extends \yii\web\Controller
         return $this->render('@app/views/site/employeeindex');
     }
 
+    public function actionProfile()
+    {
+        return $this->render('@app/views/site/employeeprofile');
+    }
+
 }

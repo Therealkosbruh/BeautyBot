@@ -9,4 +9,8 @@ class UserController extends \yii\web\Controller
         return $this->render('@app/views/site/userbonuses');
     }
 
+    public function actionProfile(){
+        return $this->render('@app/views/site/profile');
+    }
+
 }

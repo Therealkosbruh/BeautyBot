@@ -53,7 +53,7 @@ $this->title = 'Eva_bot';
                     </div>
                     <div class="action-container">
                         <img loading="lazy" src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/Info-icon.jpg" alt="" class="action-icon" />
-                        <button class="select-button" tabindex="0">Выбрать</button>
+                        <button class="select-button" tabindex="0"><?= Html::a('Выбрать', ['signup/signup'], ['class'=>'custom-link'])?></button>
                     </div>
                     </div>
                 </div>

@@ -45,7 +45,7 @@ if (Yii::$app->request->get('afterBuy') == true){
       </a>
     </header> -->
     <header class="profile-section">
-    <div class="user-profile">
+      <?= Html::a('    <div class="user-profile">
             <div class="profile-info">
                 <img src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/avatar-example.jpg" alt="User profile" class="profile-image" />
                 <div class="user-details">
@@ -57,7 +57,10 @@ if (Yii::$app->request->get('afterBuy') == true){
                 </div>
             </div>
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f5e3e0a5f94b9e193ad60107c2d41e2b877b26dbb0b47568ae9484b8acea7ad?placeholderIfAbsent=true&apiKey=b5d403ee4291413a8773ca2b908d16f3" alt=">" class="vertical-divider" />
-        </div>
+        </div>',
+        ['/user/profile']
+        )
+      ?>
         <a href="#" class="telegram-section">
             <img src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/tg-icon.jpg" alt="Telegram" class="telegram-icon" />
             <div class="telegram-info">

@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Html;
 $this->title = 'Eva_bot';
 ?>
 
@@ -15,7 +16,14 @@ $this->title = 'Eva_bot';
               </div>
               <div class="specialist-experience">опыт > 6 лет</div>
             </div>
+            <?= Html::a(
+            '
             <button class="book-button" tabindex="0">Записаться</button>
+            ',['/employee/profile'],
+            ['class'=> 'custom-link']
+            )
+            ?>
+            <!-- <button class="book-button" tabindex="0">Записаться</button> -->
           </div>
         </div>
       </div>

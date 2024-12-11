@@ -21,6 +21,14 @@ $this->title = 'Eva_bot';
             </div>
           </div>
           <section class="section-container">
+            <?= Html::a('
+            <div class="feedbackBlock" id = "banner-inside">
+            <img src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/lazer-pink-subs.jpg" alt="banner">
+            </div>
+            ',
+            ['subscription/profile'],
+            )
+            ?>
           <a href="#"><div class="feedbackBlock" id = "banner-inside">
             <img src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/lazer-pink-subs.jpg" alt="banner">
             </div>
