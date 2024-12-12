@@ -298,8 +298,12 @@ header {
 }
 
 .card img {
-    width: 184px;
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: var(--border-radius); 
 }
+
 
 .productPrice,
 .productName {
@@ -1065,9 +1069,15 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     width: 100%;
     max-width: 437px;
     align-items: center;
-    gap: 40px 49px;
+    gap: 40px 19px;
     font-family: Mulish, sans-serif;
     justify-content: space-between;
+}
+
+@media(max-width: 395px){
+  .profile-section {
+    margin-left: -35px;
+}
 }
 
 .user-profile {
@@ -1091,7 +1101,6 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     aspect-ratio: 1;
     object-fit: contain;
     width: 67px;
-    /* border-radius: 100%; */
 }
 
 .user-details {
@@ -1142,10 +1151,11 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     padding: 17px 16px 17px 7px;
     align-self: stretch;
     line-height: 1;
-    width: 185px;
+    width: 1625px;
     height: 67px;
     margin-top: 15px;
 }
+
 
 .telegram-icon {
     aspect-ratio: 1;
