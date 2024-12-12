@@ -3086,7 +3086,7 @@ input[type="text"]::placeholder, #comment::placeholder, input[type="email"]::pla
     color: #fff;
   }
   
-  .date-cell:not(.date-cell-inactive):hover {
+  .date-cell:not(.date-cell-selected):hover {
     background-color: rgba(117, 97, 232, 0.1);
   }
   
