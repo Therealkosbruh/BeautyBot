@@ -18,7 +18,7 @@ $this->title = 'beauty_bot';
 <section class="mainSliderWithSystem">
   <?= Html::button('<img
       loading="lazy"
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbb5acf6301426430052f35a0a0b1bf00c234e14866e38b76c64250cda4321a3?placeholderIfAbsent=true&apiKey=b5d403ee4291413a8773ca2b908d16f3"
+      src="https://raw.githubusercontent.com/Therealkosbruh/svg/refs/heads/main/calendar-icon.png"
       class="appointment-icon"
       alt="appointment-icon"
     />', ["class"=> "appointment-icon-wrapper", "id"=>"toggle-calendar"]) ?>
@@ -164,11 +164,11 @@ $this->title = 'beauty_bot';
     <div class="calendar-wrapper">
       <div class="month-selector" role="navigation" aria-label="Month navigation">
         <button class="month-nav-btn prev" aria-label="Previous month" onclick="changeMonth(-1)">
-          <img class="month-nav" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5690d8d039d091ff703551615324b4f5c6ac93ef2ca5f4f4e9a9abfa261d056?placeholderIfAbsent=true&apiKey=b5d403ee4291413a8773ca2b908d16f3" alt="" aria-hidden="true" />
+          <img class="month-nav" src="https://github.com/Therealkosbruh/svg/blob/main/arrow-up-down.jpg?raw=true" alt="" aria-hidden="true"  style="transform: rotate(-90deg);"/>
         </button>
         <div class="current-month" role="heading" aria-level="2" id="current-month"></div>
         <button class="month-nav-btn next" aria-label="Next month" onclick="changeMonth(1)">
-          <img class="month-nav" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1c423aaae53f2fe6c4a175eef0d76e665078f2dd74c6110a8ddd55262604d6c?placeholderIfAbsent=true&apiKey=b5d403ee4291413a8773ca2b908d16f3" alt="" aria-hidden="true" />
+          <img class="month-nav" src="https://github.com/Therealkosbruh/svg/blob/main/arrow-up-down.jpg?raw=true" alt="" aria-hidden="true"  style="transform: rotate(90deg);"/>
         </button>
       </div>
       <div class="calendar-grid">
