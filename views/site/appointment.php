@@ -21,7 +21,7 @@ $this->title = 'beauty_bot';
       src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbb5acf6301426430052f35a0a0b1bf00c234e14866e38b76c64250cda4321a3?placeholderIfAbsent=true&apiKey=b5d403ee4291413a8773ca2b908d16f3"
       class="appointment-icon"
       alt="appointment-icon"
-    />', ["class"=> "appointment-icon-wrapper"]) ?>
+    />', ["class"=> "appointment-icon-wrapper", "id"=>"toggle-calendar"]) ?>
 <?= Html::button('
 <div class="icon-button" role="button" tabindex="0">
   <div class="appointment-icon-wrapper">
@@ -160,7 +160,7 @@ $this->title = 'beauty_bot';
 </section>
 </div>
 
-<div class="calendar-container" role="application" aria-label="Calendar">
+<div class="calendar-container" role="application" aria-label="Calendar" style="display: none;">
     <div class="calendar-wrapper">
       <div class="month-selector" role="navigation" aria-label="Month navigation">
         <button class="month-nav-btn prev" aria-label="Previous month" onclick="changeMonth(-1)">
@@ -541,6 +541,17 @@ $this->title = 'beauty_bot';
   
   document.addEventListener('DOMContentLoaded', () => {
     const calendar = new Calendar();
+   
+    const calendarContainer = document.querySelector('.calendar-container');
+    const toggleButton = document.getElementById('toggle-calendar');
+
+    toggleButton.addEventListener('click', () => {
+        if (calendarContainer.style.display === 'none') {
+            calendarContainer.style.display = 'block';
+        } else {
+            calendarContainer.style.display = 'none';
+        }
+    });
   });
 </script>
 
