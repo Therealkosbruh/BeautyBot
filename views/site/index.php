@@ -113,6 +113,7 @@ if (Yii::$app->request->get('afterBuy') == true){
     <h2>Наши популярные услуги</h2>
       <section class="productCards">
           <?php
+          $products = [];
           foreach ($products as $num => $product) {
               ?>
               <div class="card flexColumn">
@@ -137,5 +138,20 @@ if (Yii::$app->request->get('afterBuy') == true){
               </div>
           <?php } ?>
       </section>
-    <?= Html::a('Посмотреть все услуги студии', ['products/index'], ['class' => "showMoreButton"]);?>
+
+      <a href="/web/site/invite">invite</a><br>
+      <a href="/web/site/about">about</a><br>
+      <a href="/web/site/actions">actions</a><br>
+      <a href="/web/user/bonuses">bonuses</a><br>
+      <a href="/web/user/profile">profile</a><br>
+      <a href="/web/employee/">employee</a><br>
+      <a href="/web/employee/profile">employee profile</a><br>
+      <a href="/web/signup/signup">signup/signup</a><br>
+      <a href="/web/signup/service-info">signup/service-info</a><br>
+      <a href="/web/signup/choose-service">signup/choose-service</a><br>
+      <a href="/web/subscription">subscription</a><br>
+      <a href="/web/subscription/profile">subscription/profile</a><br>
+
+
+      <?= Html::a('Посмотреть все услуги студии', ['products/index'], ['class' => "showMoreButton"]);?>
   </div>

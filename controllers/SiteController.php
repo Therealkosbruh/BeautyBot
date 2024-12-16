@@ -2,9 +2,6 @@
 
 namespace app\controllers;
 
-use app\models\Categories;
-use app\models\ProductImages;
-use app\models\Products;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -64,17 +61,17 @@ class SiteController extends Controller
      */
     public function actionIndex(): string
     {
-        $products = Products::find()
-            ->andWhere(['OnMain' => true])
-            ->with('mainImage')
-            ->with('productMarkAssignments')
-            ->all();
+        // $products = Products::find()
+        //     ->andWhere(['OnMain' => true])
+        //     ->with('mainImage')
+        //     ->with('productMarkAssignments')
+        //     ->all();
 
-        $categories = Categories::find()->all();
+        // $categories = Categories::find()->all();
 
         return $this->render('index', [
-            'products' => $products,
-            'categories' => $categories
+            // 'products' => $products,
+            // 'categories' => $categories
         ]);
     }
 
@@ -89,8 +86,9 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionActions(){
-        return $this->render('signup');        
+    public function actionActions()
+    {
+        return $this->render('signup');
     }
 
 
@@ -156,7 +154,8 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionInvite(){
+    public function actionInvite()
+    {
         return $this->render('@app/views/friendinvite');
     }
 }
